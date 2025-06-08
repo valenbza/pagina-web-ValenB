@@ -59,3 +59,7 @@ function removeFromCart(nombre){
     }
     updateCart();
 }
+
+document.getElementById('checkout-button').addEventListener('click', function() {
+    window.location.href = 'checkout.html';
+});
