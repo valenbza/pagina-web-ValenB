@@ -84,7 +84,7 @@ function mostrarModalConfirmacion() {
                         <p class="text-center small">El comprobante será enviado a tu correo electrónico.</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                        <button type="button" class="btn btn-primary" id="aceptar-btn" data-bs-dismiss="modal">Aceptar</button>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,12 @@ function mostrarModalConfirmacion() {
 
     const modal= new bootstrap.Modal(document.getElementById('pedidoConfirmadoModal'));
     modal.show();
-    
+    setTimeout(() => {
+        document.getElementById('aceptar-btn').addEventListener('click', () => {
+        localStorage.removeItem('cart');            
+        window.location.href = 'index.html';           
+        });
+    }, 0);
 }
 
 
