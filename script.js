@@ -37,8 +37,10 @@ function updateCart(){
                     <td>${item.precio}</td>
                     <td>${subtotal}</td>
                     <td>
-                        <button class="btn btn-danger btn-sm" onclick="removeFromCart('${item.nombre}')">-</button>
-                        <button class="btn btn-success btn-sm" onclick="addToCart('${item.nombre}', ${item.precio})">+</button>
+                        <div class="cart-buttons">
+                            <button class="btn btn-danger btn-sm" onclick="removeFromCart('${item.nombre}')">-</button>
+                            <button class="btn btn-success btn-sm" onclick="addToCart('${item.nombre}', ${item.precio})">+</button>
+                        </div>
                     </td>
                 </tr>`;
         cartItems.innerHTML += row;
